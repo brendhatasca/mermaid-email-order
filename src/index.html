@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="./app.js" defer></script>
+    <title>Seacore Email Generator</title>
+</head>
+<body>
+    <label for="order-date">Order for:</label>
+    <input type="date" class="order-date"></br>
+
+    <div class="product-search-and-add">
+        <label for="product-name"></label>
+            <input type="text" name="product-name" id="product-name-from-search" class="search-bar" placeholder="Shrimp Cocktail">
+            <button type="submit" class="add-to-list">Add</button>
+    </div>
+  
+
+    <ul id="product-list">
+    </ul>
+
+
+    <button type="submit" class="generate-email">Generate Email</button>
+
+</body>
+</html>
