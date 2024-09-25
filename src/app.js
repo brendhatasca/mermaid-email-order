@@ -1,6 +1,6 @@
 import { createNewProduct } from "./modules/productList.js";
-import { createTextBody } from "./modules/writeEmail.js";
-import { format } from "date-fns";
+import { createTextBody, generateEmail } from "./modules/writeEmail.js";
+import "./style.css";
 
 document.addEventListener('DOMContentLoaded', () => { 
     const productFromSearch = document.getElementById('product-name-from-search');
@@ -14,18 +14,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     generateEmailBtn.addEventListener("click", () => {
-        createTextBody();
-
-        const dateInputValue = document.querySelector('.order-date').value;
-        const selectedDate = new Date(dateInputValue);
-        const formattedDate = format(selectedDate, 'EEEE, MMMM d');
-        console.log(formattedDate);
+        generateEmail();
     })
 }
 );
 
-const myDate = document.querySelector('.order-date');
-console.log(myDate.value);
 
 
 

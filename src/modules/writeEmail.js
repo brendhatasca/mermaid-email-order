@@ -1,9 +1,11 @@
 import { createProductList } from "./productList.js";
+import { format, parse } from "date-fns";
+
 
 export function generateEmail() {
     const email = "orders@seacore.ca";
     const subject = "The Mermaid Order";
-    const body = listToTextBody();
+    const body = createTextBody();
 
     const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
@@ -16,6 +18,7 @@ export function createTextBody() {
     let bodyText = "Hi\n\n";
     bodyText += "I would like to place an order for The Mermaid\n";
     bodyText += "250 Kerr St, Oakville\n\n"
+    bodyText += `For ${getOrderdDate()}\n\n`;
 
 
     list.forEach(item => {
@@ -25,6 +28,14 @@ export function createTextBody() {
 
     return bodyText;
 };
+
+function getOrderdDate() {
+    const dateInputValue = document.querySelector('.order-date').value;
+    const selectedDate = parse(dateInputValue, 'yyyy-MM-dd', new Date());
+    const formattedDate = format(selectedDate, 'EEEE, MMMM d');
+
+    return formattedDate;
+}
 
 // fullList = { quantity: 2, unit: 'lbs', productName: 'shrimp' }
 

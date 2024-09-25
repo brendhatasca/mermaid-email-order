@@ -12,7 +12,8 @@ export function createNewProduct(productFromSearch, productList) {
 
     const unitOptions = [
         { value: "lbs", text: "lbs"},
-        { value: "cases", text: "cases"}
+        { value: "cases", text: "cases"},
+        { value: "sides", text: "sides" }
     ];
     const unitInput = createSelectElement(unitOptions, "product-item-unit");
 
