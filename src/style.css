@@ -10,6 +10,44 @@ body {
     margin-top: 50px;
 }
 
+[for="order-date"] {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.product-search-and-add {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  margin: 20px;
+}
+
+.dropdown-content {
+  position: absolute;
+  text-align: center;
+  font-weight: 400;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 5px;
+  border-radius: 15px;
+  min-width: 190px;
+  max-width: 190px;
+  max-height: 200px;
+  overflow-y: auto;
+  display: none; /* Initially hidden */
+  z-index: 1;
+}
+
+.dropdown-content div {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.dropdown-content div:hover {
+  background-color: #f1f1f1;
+}
+
 input[type="number"]{
     width: 50px;
 }
@@ -20,7 +58,7 @@ input {
     color: #242424;
     padding: .15rem .5rem;
     min-height: 40px;
-    border-radius: 100px;
+    border-radius: 20px;
     outline: none;
     border: none;
     line-height: 1.15;
@@ -91,15 +129,8 @@ select {
   color: #ffffff;
 }
 
-[for="order-date"] {
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 10px;
-}
 
-.product-search-and-add {
-    margin: 20px;
-}
+
 
 ul {
     margin-bottom: 8vh;

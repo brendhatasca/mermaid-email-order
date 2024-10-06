@@ -17,8 +17,13 @@ export function createTextBody() {
 
     let bodyText = "Hi\n\n";
     bodyText += "I would like to place an order for The Mermaid\n";
-    bodyText += "250 Kerr St, Oakville\n\n"
-    bodyText += `For ${getOrderdDate()}\n\n`;
+    bodyText += "250 Kerr St, Oakville\n\n";
+    if (document.querySelector('.order-date').value !== '') {
+        bodyText += `For ${getOrderdDate()}\n\n`
+    } else {
+        alert('Must select date!');
+        return;
+    };
 
 
     list.forEach(item => {

@@ -19,7 +19,7 @@ export function createNewProduct(productFromSearch, productList) {
 
     const productName = document.createElement('div');
     productName.classList.add('product-item-description');
-    productName.textContent = productFromSearch.value;
+    productName.textContent = productFromSearch;
 
     listItem.append(qtyInput, unitInput, productName);
     productList.appendChild(listItem);
@@ -42,13 +42,13 @@ export function createProductList() {
 
     // will create an obj storing all data about the product
     function createItemObj(qty, unitMeasure, product) {
-    const itemObj = { };
+        const itemObj = { };
 
-    itemObj.quantity = qty.value;
-    itemObj.unit = unitMeasure.value;
-    itemObj.productName = product.textContent;
-    
-    return itemObj;
+        itemObj.quantity = qty.value;
+        itemObj.unit = unitMeasure.value;
+        itemObj.productName = product.textContent;
+        
+        return itemObj;
     };
 
     return fullProductList;
