@@ -1,4 +1,4 @@
-import { createInputElement, createSelectElement } from "./domHelpers.js";
+import { createInputElement, createSelectElement, createButton, createDiv } from "./domHelpers.js";
 
 // will create <li> element and add product-item class to it
 // with the dom helper function createInputElement, input type="number" will be created
@@ -17,11 +17,13 @@ export function createNewProduct(productFromSearch, productList) {
     ];
     const unitInput = createSelectElement(unitOptions, "product-item-unit");
 
-    const productName = document.createElement('div');
-    productName.classList.add('product-item-description');
-    productName.textContent = productFromSearch;
+    const productName = createDiv(productFromSearch, "product-item-description");
 
-    listItem.append(qtyInput, unitInput, productName);
+    const removeBtn = createButton('X', 'remove-btn', () => {
+        listItem.remove();
+    })
+
+    listItem.append(qtyInput, unitInput, productName, removeBtn);
     productList.appendChild(listItem);
 };
 

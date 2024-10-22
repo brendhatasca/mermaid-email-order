@@ -146,6 +146,15 @@ li {
     list-style-type: none;
 }
 
+.remove-btn {
+  border: none;
+  background-color: transparent;
+  color: #b787f0;
+  font-weight: 800;
+  margin-left: px;
+  cursor: pointer;
+}
+
 .generate-email {
     align-items: center;
     background-color: #5d0ac2;

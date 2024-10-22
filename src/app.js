@@ -1,5 +1,5 @@
 import { createNewProduct } from "./modules/productList.js";
-import { createTextBody, generateEmail } from "./modules/writeEmail.js";
+import { generateEmail } from "./modules/writeEmail.js";
 import { populateDropdownMenu } from "./modules/searchBar.js";
 import "./style.css";
 

@@ -28,4 +28,21 @@ export function createParagraph(paraContent, paraClass) {
     para.textContent = paraContent;
 
     return para;
+};
+
+export function createButton(text, className, onCLickHandler) {
+    const btn = document.createElement('button');
+    btn.textContent = text;
+    btn.classList.add(className);
+    btn.onclick = onCLickHandler;
+
+    return btn;
+};
+
+export function createDiv(text, className) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    div.classList.add(className);
+
+    return div;
 }
